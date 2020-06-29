@@ -10,6 +10,8 @@ namespace BooksApp.ClientApp.Model
     public long Id { get; set; }
     public string Title { get; set; }
     public int Year { get; set; }
+    public string Description { get; set; }
+    public long Earnings { get; set; }
     public bool IsElectronicFormat { get; set; }
     public Genre Genre { get; set; }
     public string PictureURL { get; set; }
