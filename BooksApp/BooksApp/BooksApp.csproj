@@ -14,6 +14,7 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="3.1.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.5" />
   </ItemGroup>
 
   <ItemGroup>
@@ -21,6 +22,17 @@
     <Content Remove="$(SpaRoot)**" />
     <None Remove="$(SpaRoot)**" />
     <None Include="$(SpaRoot)**" Exclude="$(SpaRoot)node_modules\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="ClientApp\Model\Book.cs" />
+    <Compile Remove="ClientApp\Model\Comment.cs" />
+    <Compile Remove="ClientApp\Model\FavouriteBook.cs" />
+    <Compile Remove="ClientApp\Model\Genre.cs" />
+    <Compile Remove="ClientApp\Model\User.cs" />
+    <Compile Remove="ClientApp\Model\UserComment.cs" />
+    <Compile Remove="ClientApp\Model\UserRating.cs" />
+    <Compile Remove="ClientApp\Model\UserRole.cs" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
