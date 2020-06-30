@@ -25,6 +25,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Remove="ClientApp\DbContext\BooksContext.cs" />
     <Compile Remove="ClientApp\Model\Book.cs" />
     <Compile Remove="ClientApp\Model\Comment.cs" />
     <Compile Remove="ClientApp\Model\FavouriteBook.cs" />
